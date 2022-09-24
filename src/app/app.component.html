@@ -1,0 +1,11 @@
+<br/><h1 class="margin-light"><b>Books</b></h1>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <label class="shadow-lg p-3 bg-white rounded full-width" mat-button [routerLink]="'/books'"> BOOK LIST </label>
+    <label class="shadow-lg p-3 bg-white rounded full-width" mat-button [routerLink]="'/courses'"> COURSES </label>
+  </mat-drawer>
+  <div class="example-sidenav-content">
+      <label class="margin-light" (click)="drawer.toggle()"><b>Menu!!</b></label>
+      <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

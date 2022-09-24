@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-5">
+        <div class="input-group margin-right">
+            <input class="form-control border-end-0 border rounded-pill" type="search"
+                id="example-search-input" [(ngModel)]="searchText" >
+        </div>
+    </div>
+  </div>
+<div class="row">
+    <h4 class="margin-right">All Books</h4>
+    <div class="col-sm-6" *ngFor="let book of books.items | searchFilter:searchText; index as i">
+        <div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{book.volumeInfo.title}}</h5>
+                    <label class="card-text">
+                        Authors: {{book.volumeInfo.authors}}</label><br />
+                    <label class="card-text">Publishers: {{book.volumeInfo.publisher}}</label><br />
+                    <label class="card-text">Published Date: {{book.volumeInfo.publishedDate}}</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
